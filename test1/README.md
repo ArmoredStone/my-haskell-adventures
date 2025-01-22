@@ -11,8 +11,7 @@ HSL - Haskell Language Server - a language server for IDE integration
 
 For up to date toolchain and installation methods refer to https://haskell.org/
 
-
-## compile with ghc
+## Compile with ghc
 
 ```
 ghc hello.hs
@@ -25,7 +24,8 @@ Complier will generate 3 files:
 
 3. hello.o - Intermediate files produced by the complier with machine code. They are not executable but used to link Haskell code to final executable. 
 
-## use by loading module in ghci
+## Use by loading module in ghci
+
 ```
 ghci
 ghci> :l hello

@@ -1,10 +1,12 @@
+{-
+    Session 1 Haskell file
+-}
 -- learnyouahaskell.com
 
 test1 = do
     putStrLn "Hello, what's your name?"
     name <- getLine
     putStrLn ("Hey " ++ name ++ ", you rock!")
-
 
 test2 = do
     putStrLn "What's 2 + 2?"
@@ -28,7 +30,5 @@ doubleSmallNumber x = if x > 100
                         then x
                         else x*2
 
-
 doubleSmallNumber'1 x = (if x > 100 then x else x*2) + 1
 doubleSmallNumber'2 x = if x > 100 then x else x*2 + 1
-
