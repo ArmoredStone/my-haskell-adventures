@@ -28,3 +28,7 @@ doubleSmallNumber x = if x > 100
                         then x
                         else x*2
 
+
+doubleSmallNumber'1 x = (if x > 100 then x else x*2) + 1
+doubleSmallNumber'2 x = if x > 100 then x else x*2 + 1
+

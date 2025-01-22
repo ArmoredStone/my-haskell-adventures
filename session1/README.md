@@ -120,5 +120,15 @@ Simple and common patterns, making functions that are obviously correct. And the
 
 Definition order does not matter.
 
+Function names can't start with capital letters, you can use ' symbol in function name.
 
+When a function doesn't take parameters it is called a definition, because you can't change what it means after defined. Like a constant?
 
+## if statements
+
+Example: doubleWithCondition = if x > 100 then x else x*2
+
+else part is mandatory
+Use parentheses to manipulate data returned with your functions.
+
+## Introduction to Lists
