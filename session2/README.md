@@ -8,7 +8,7 @@ In Haskell list is a homogenous data structure.
 
 Meaning they store elements of same type only.
 
-To define a name in ghci use let
+To define in ghci use keyword `let`
 Example: `let a = 1`
 
 Lists are defined in square brackets.
@@ -49,6 +49,7 @@ Basic list related functions:
 To make list of natural sequences.
 
 Examples:
+
 ```
 [1..5]
 ['a'..'z']
@@ -129,11 +130,12 @@ https://wiki.haskell.org/Learn_Haskell_in_10_minutes
 `do { n <- readLn; print (n^2) }`
 
 ```
-main = do putStrLn "What is 2 + 2?"
-          x <- readLn
-          if x == 4
-              then putStrLn "You're right!"
-              else putStrLn "You're wrong!"
+main = do 
+        putStrLn "What is 2 + 2?"
+        x <- readLn
+        if x == 4
+            then putStrLn "You're right!"
+            else putStrLn "You're wrong!"
 ```
 
 ## Simple Types
