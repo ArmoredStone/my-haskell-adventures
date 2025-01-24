@@ -150,5 +150,111 @@ Functions:
 - Either: values with two possibilities
 Constructors: `Left` and `Right`
 Functions:
+`either f1 f2 val` function to choose a handler based if it matches the Either type declaration of value 
 
+- Ordering: for comparison operations
+Constructors:
+`LT` - less than
+`EQ` - equal
+`GT` - greater than
 
+- Char: representing unicode characters.
+Character literals are single quoted.
+
+https://www.haskell.org/definition/haskell2010.pdf#section.2.6
+
+- String: alias for a list of characters.
+
+- Tuples
+Functions:
+`fst` - extract first component of a pair
+`snd` - extract second component of a pair
+`curry`
+`uncurry`
+Curried functions in Haskell allow you to partially apply functions, creating new functions with fewer arguments.
+
+## Basic type classes
+
+- Eq: defines equality and inequality.
+Methods:
+`(==)`
+`(/=)`
+for Ord classes also:
+`(>)`
+`(<)`
+`(>=)`
+`(<=)`
+`max`
+`min`
+
+- Enum: defines operations on sequentially ordered types.
+Methods:
+`succ` - gives next value in order
+`pred` - gives previous value in order
+`toEnum` - convertasions
+`fromEnum`
+`enumFrom`
+`enumFromThen`
+`enumFromTo`
+`enumFromThenTo`
+
+- Bounded: define upper and lower limits of a type.
+Methods:
+`minBound`
+`maxBound`
+
+## Numeric types
+
+- Int: 32 bit precision Integer type.
+
+- Integer
+
+- Float: single-precision float point numbers.
+
+- Double: double-precision floating point numbers.
+
+- Rational: arbitrary precision rational numbers, as ratio of two integer values, constructed with `%` operator.
+
+- Word: unsigned integral type, size as Int.
+
+# Numeric type classes
+
+- Num: for all numbers
+Methods:
+`(+)`
+`(-)`
+`(*)`
+`negate` - flips the sign
+`abs` - absolute value
+`signum` - returns sign of number, -1, 1 or 0
+`fromInteger` - conversion
+
+- Num => Real: for real numbers
+Methods:
+`toRational` rational equivalent with full precision
+
+- Num => Integral: for integral numbers
+Supports integer division
+Methods:
+`quot` - division truncated towards zero
+`rem` - remainder from division
+`div` - division truncated towards infinity
+`mod` - remainder
+
+The mod function computes the remainder of a division operation, but the result has the same sign as the divisor
+
+The rem function computes the remainder of a division operation, but the result has the same sign as the dividend
+
+`quotRem` - simultaneous quot and rem
+`divMod` - simultaneous quot and rem
+`toInteger` - conversion
+
+- Num => Fractional: for fractional numbers
+Methods:
+`(/)`
+`recip`
+`fromRational`
+
+- Fractional
+
+https://hackage.haskell.org/package/base-4.21.0.0/docs/Prelude.html#t:Fractional

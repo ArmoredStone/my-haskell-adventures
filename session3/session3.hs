@@ -61,13 +61,37 @@ a4 = False
 a5 = a1 && a2
 a6 = a1 || a3
 a7 = not a1
-a8 b = b | b < 5 = "u5"
-         | b < 10 = "u10"
-         | otherwise = "o10"
+a8 :: Int -> String
+a8 xx 
+    | xx < 5 = "u5"
+    | xx < 10 = "u10"
+    | otherwise = "o10"
 
 -- Maybe
 
-b1 = maybe False odd (Just 3)
+b1 :: Int -> Bool
+b1 xx = maybe False odd (Just xx)
 
+-- Either
+
+c1 :: Either String Int
+c1 = Left "foo"
+
+c2 :: Either String Int
+c2 = Right 5
+
+handleLeft :: String -> String
+handleLeft = show . (head)
+
+handleRight :: Int -> String
+handleRight = show . (*2)
+
+c3 = either handleLeft handleRight c1
+c4 = either handleLeft handleRight c2
+
+-- Char
+d1 = 'a'
+d2 = pred d1
+d3 = succ d1
 
 
